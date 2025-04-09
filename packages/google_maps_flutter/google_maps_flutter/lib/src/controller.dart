@@ -35,7 +35,7 @@ class GoogleMapController {
   }
 
   final _GoogleMapState _googleMapState;
-  late final _GoogleMapStateMarkersUpdateHandler _markersUpdateHandler = _GoogleMapStateMarkersUpdateHandler(this);
+  // late final _GoogleMapStateMarkersUpdateHandler _markersUpdateHandler = _GoogleMapStateMarkersUpdateHandler(this);
   late final _GoogleMapStatePolylinesUpdateHandler _polylinesUpdateHandler = _GoogleMapStatePolylinesUpdateHandler(this);
   late final _GoogleMapStatePolygonsUpdateHandler _polygonsUpdateHandler = _GoogleMapStatePolygonsUpdateHandler(this);
   late final _GoogleMapStateCirclesUpdateHandler _circlesUpdateHandler = _GoogleMapStateCirclesUpdateHandler(this);

@@ -149,42 +149,42 @@ abstract class _GoogleMapStateUpdateHandler<U, I, E> {
   );
 }
 
-class _GoogleMapStateMarkersUpdateHandler extends _GoogleMapStateUpdateHandler<MarkerUpdates, MarkerId, Marker> {
-  _GoogleMapStateMarkersUpdateHandler(super.mapController);
+// class _GoogleMapStateMarkersUpdateHandler extends _GoogleMapStateUpdateHandler<MarkerUpdates, MarkerId, Marker> {
+//   _GoogleMapStateMarkersUpdateHandler(super.mapController);
 
-  @override
-  MarkerUpdates _buildIncrementalUpdates(Set<Marker> oldItems, Set<Marker> newItems) {
-    return MarkerUpdates.from(oldItems, newItems);
-  }
+//   @override
+//   MarkerUpdates _buildIncrementalUpdates(Set<Marker> oldItems, Set<Marker> newItems) {
+//     return MarkerUpdates.from(oldItems, newItems);
+//   }
 
-  @override
-  Set<MarkerId> _getIdsToRemove(MarkerUpdates updates) => updates.markerIdsToRemove;
+//   @override
+//   Set<MarkerId> _getIdsToRemove(MarkerUpdates updates) => updates.markerIdsToRemove;
 
-  @override
-  Set<Marker> _getItemsToAdd(MarkerUpdates updates) => updates.markersToAdd;
+//   @override
+//   Set<Marker> _getItemsToAdd(MarkerUpdates updates) => updates.markersToAdd;
 
-  @override
-  Set<Marker> _getItemsToChange(MarkerUpdates updates) => updates.markersToChange;
+//   @override
+//   Set<Marker> _getItemsToChange(MarkerUpdates updates) => updates.markersToChange;
 
-  @override
-  MarkerId _getItemId(Marker item) => item.markerId;
+//   @override
+//   MarkerId _getItemId(Marker item) => item.markerId;
 
-  @override
-  Future<void> _applyIncrementalUpdates(
-    MarkerUpdates updates,
-    Set<MarkerId> idsToRemove,
-    Set<Marker> itemsToAdd,
-    Set<Marker> itemsToChange,
-  ) async {
-    await _mapController._updateMarkers(updates);
-    _mapController._googleMapState._markers = _getUpdatedItemsMap(
-      _mapController._googleMapState._markers,
-      idsToRemove,
-      itemsToAdd,
-      itemsToChange,
-    );
-  }
-}
+//   @override
+//   Future<void> _applyIncrementalUpdates(
+//     MarkerUpdates updates,
+//     Set<MarkerId> idsToRemove,
+//     Set<Marker> itemsToAdd,
+//     Set<Marker> itemsToChange,
+//   ) async {
+//     await _mapController._updateMarkers(updates);
+//     _mapController._googleMapState._markers = _getUpdatedItemsMap(
+//       _mapController._googleMapState._markers,
+//       idsToRemove,
+//       itemsToAdd,
+//       itemsToChange,
+//     );
+//   }
+// }
 
 class _GoogleMapStatePolylinesUpdateHandler extends _GoogleMapStateUpdateHandler<PolylineUpdates, PolylineId, Polyline> {
   _GoogleMapStatePolylinesUpdateHandler(super.mapController);
