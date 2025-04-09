@@ -358,13 +358,13 @@ extension GoogleMapControllerImperativeExtension on GoogleMapController {
 
   /// Updates a set of markers with a new set of markers.
   /// The set of markers can be a partial list markers.
-  Future<void> partiallyUpdateMarkers(
-    Set<Marker> oldMarkers,
-    Set<Marker> newMarkers, {
-    bool realTime = false,
-  }) async {
-    await _markersUpdateHandler.apply(oldMarkers, newMarkers, realTime: realTime);
-  }
+  // Future<void> partiallyUpdateMarkers(
+  //   Set<Marker> oldMarkers,
+  //   Set<Marker> newMarkers, {
+  //   bool realTime = false,
+  // }) async {
+  //   await _markersUpdateHandler.apply(oldMarkers, newMarkers, realTime: realTime);
+  // }
 
   /// Updates a set of polylines with a new set of polylines.
   /// The set of polylines can be a partial list polylines.
