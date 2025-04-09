@@ -394,7 +394,7 @@ class _GoogleMapState extends State<GoogleMap> {
     _updateOptions();
     // MOD imperative map updates (commented the lines below)
     _updateClusterManagers();
-    // _updateMarkers();
+    _updateMarkers();
     // _updatePolygons();
     // _updatePolylines();
     // _updateCircles();
