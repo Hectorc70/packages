@@ -1,4 +1,3 @@
-@@ -0,0 +1,398 @@
 /// Attempts to centralize Google Maps customizations, however some other files had to be modified, they are marked
 /// with the following in-code comment:
 /// // MOD imperative map updates
