@@ -495,7 +495,7 @@ class _GoogleMapState extends State<GoogleMap> {
     if (!mounted) {
       return;
     }
-    _updateOptions();
+    _updateOptions(controller);
     // _updateOptions(controller);
     // _updateClusterManagers(controller);
     // _updateMarkers(controller);
